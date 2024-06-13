@@ -4,12 +4,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding : 0 , 
+    }
+    .inputBox{
+        width: 10rem;
+        height: 3rem ;
+        border-radius: 2rem;
+        position : absolute ; 
+        top : 3rem ; 
+        left : calc((100% - 10rem) / 2);
+       
+        background-color: #4d39d1;
+        color: #ffffff; 
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        
+    }
+    
+    input {
+        opacity: 0;
+        position: absolute;
+        top: 0; 
+        left: 0 ; 
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <body>
-    <div>
-        <input  type = "file" accept="audio/*"/>
+    
+        <div class="inputBox">
+            Upload Audio
+            <input  type = "file" accept="audio/*"/>
+        </div>
         <audio class="audio"></audio>
         <canvas></canvas>
-    </div>
+   
     <script src="./index.js"/>
 </body>
 </html>
